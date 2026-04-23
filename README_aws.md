@@ -196,7 +196,7 @@ Sau đó thay giá trị AMI trong `main.tf` GPU Node block bằng AMI ID vừa 
 
 ```bash
 cd terraform
-export TF_VAR_hf_token="dummy"   # Không cần HF token khi chạy LGBM
+export TF_VAR_hf_token="dummy"   
 terraform apply
 ```
 
@@ -207,7 +207,7 @@ Gõ `yes` khi được hỏi. Quá trình tạo hạ tầng (NAT Gateway, ALB) m
 Từ Terraform outputs, lấy `bastion_public_ip` và `gpu_private_ip` (bây giờ là CPU node):
 
 ```bash
-# SSH vào Bastion Host
+# SSH vào Bastion Hosts
 ssh -i <KEY_FILE>.pem ec2-user@<BASTION_PUBLIC_IP>
 
 # Từ Bastion, SSH vào CPU Node

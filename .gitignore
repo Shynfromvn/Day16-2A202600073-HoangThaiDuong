@@ -19,4 +19,4 @@ lab-key.pub
 
 # Environment Variables
 .env
-.env.local
+.env.localkaggle.json
